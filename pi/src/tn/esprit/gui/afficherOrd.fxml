@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.controllers.AfficherOrdController">
+   <children>
+      <ListView fx:id="liste_ord" layoutX="24.0" layoutY="37.0" prefHeight="288.0" prefWidth="552.0" />
+      <Button layoutX="116.0" layoutY="343.0" mnemonicParsing="false" onAction="#ajouter" text="Ajouter" />
+      <Button layoutX="274.0" layoutY="343.0" mnemonicParsing="false" onAction="#modifier" text="Modifier" />
+      <Button layoutX="473.0" layoutY="343.0" mnemonicParsing="false" onAction="#supprimer" text="Supprimer" />
+      <Button layoutX="14.0" layoutY="361.0" mnemonicParsing="false" onAction="#retour" text="homepage" />
+   </children>
+</AnchorPane>

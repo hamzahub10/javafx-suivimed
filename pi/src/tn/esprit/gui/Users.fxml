@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="526.0" prefWidth="721.0" style="-fx-background-color: #B0C4DE;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.controllers.UsersController">
+   <children>
+      <Label alignment="CENTER" layoutX="43.0" layoutY="23.0" prefHeight="18.0" prefWidth="90.0" text="Search">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="search" layoutX="151.0" layoutY="24.0" promptText="Search" />
+      <FontAwesomeIconView glyphName="SEARCH" layoutX="316.0" layoutY="43.0" onMouseClicked="#search_user" size="18" text="" />
+      <TableView fx:id="table" layoutX="42.0" layoutY="57.0" onMouseClicked="#change" prefHeight="226.0" prefWidth="634.0">
+        <columns>
+          <TableColumn fx:id="username" prefWidth="100.79998779296875" text="Username" />
+          <TableColumn fx:id="email" prefWidth="146.3999481201172" text="Email" />
+            <TableColumn fx:id="role" minWidth="0.0" prefWidth="112.00006103515625" text="Role" />
+            <TableColumn fx:id="phone" prefWidth="164.0" text="Phone Number" />
+            <TableColumn fx:id="address" prefWidth="111.20001220703125" text="Address" />
+        </columns>
+      </TableView>
+      <Button fx:id="print" layoutX="175.0" layoutY="429.0" mnemonicParsing="false" onAction="#print_user" prefHeight="27.0" prefWidth="114.0" text="Print">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <FontAwesomeIconView glyphName="PRINT" layoutX="186.0" layoutY="454.0" size="15" />
+      <Button fx:id="delete" layoutX="360.0" layoutY="429.0" mnemonicParsing="false" onMouseClicked="#delete_user" prefHeight="40.0" prefWidth="114.0" text="Delete">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <FontAwesomeIconView glyphName="TRASH" layoutX="370.0" layoutY="453.0" size="15" />
+      <TextField fx:id="txt_u" layoutX="68.0" layoutY="297.0" promptText="Username" />
+      <TextField fx:id="txt_e" layoutX="249.0" layoutY="334.0" promptText="Email" />
+      <TextField fx:id="txt_role" layoutX="429.0" layoutY="297.0" promptText="Role" />
+      <TextField fx:id="txt_phone" layoutX="68.0" layoutY="376.0" promptText="Phone Number" />
+      <TextField fx:id="txt_add" layoutX="439.0" layoutY="376.0" promptText="Adress" />
+   </children>
+</AnchorPane>

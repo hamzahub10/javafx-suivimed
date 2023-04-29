@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="534.0" prefWidth="768.0" style="-fx-background-color: #B0C4DE;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.controllers.RegisterController">
+    <children>
+      <TextField fx:id="username" layoutX="231.0" layoutY="164.0" prefHeight="26.0" prefWidth="234.0" promptText="Username" />
+      <TextField fx:id="password" layoutX="231.0" layoutY="207.0" prefHeight="26.0" prefWidth="234.0" promptText="Password" />
+      <ImageView fitHeight="145.0" fitWidth="326.0" layoutX="26.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/logo.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="login" layoutX="577.0" layoutY="66.0" mnemonicParsing="false" onAction="#login" prefHeight="27.0" prefWidth="81.0" style="-fx-background-color: #00008B;" text="Login" textFill="#fffefe" />
+      <Button fx:id="register" layoutX="264.0" layoutY="431.0" mnemonicParsing="false" onAction="#register" prefHeight="26.0" prefWidth="133.0" style="-fx-background-color: #00008B;" text="Register" textFill="WHITE" />
+      <TextField fx:id="phone" layoutX="231.0" layoutY="298.0" prefHeight="26.0" prefWidth="234.0" promptText="Phone Number" />
+      <TextField fx:id="email" layoutX="231.0" layoutY="252.0" prefHeight="26.0" prefWidth="234.0" promptText="Email" />
+      <TextField fx:id="address" layoutX="231.0" layoutY="342.0" prefHeight="26.0" prefWidth="234.0" promptText="Address" />
+      <RadioButton fx:id="doctor" layoutX="272.0" layoutY="387.0" mnemonicParsing="false" selected="true" text="Doctor" />
+      <RadioButton fx:id="patiant" layoutX="368.0" layoutY="387.0" mnemonicParsing="false" text="Patiant" />
+      <Label layoutX="213.0" layoutY="382.0" prefHeight="26.0" prefWidth="36.0" text="Role">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="153.0" layoutY="169.0" text="Username" />
+      <Label layoutX="153.0" layoutY="212.0" text="Password" />
+      <Label layoutX="153.0" layoutY="257.0" text="Email" />
+      <Label layoutX="127.0" layoutY="303.0" text="Phone Number" />
+      <Label layoutX="153.0" layoutY="347.0" text="Address" />
+      <FontAwesomeIconView />
+      <FontAwesomeIconView glyphName="USER" layoutX="502.0" layoutY="181.0" />
+      <FontAwesomeIconView glyphName="LOCK" layoutX="502.0" layoutY="225.0" />
+      <FontAwesomeIconView glyphName="AT" layoutX="502.0" layoutY="271.0" />
+      <FontAwesomeIconView glyphName="PHONE" layoutX="502.0" layoutY="315.0" />
+      <FontAwesomeIconView glyphName="HOME" layoutX="502.0" layoutY="360.0" />
+   </children>
+</AnchorPane>

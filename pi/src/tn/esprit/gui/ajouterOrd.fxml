@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="tn.esprit.controllers.AjouterOrdController">
+   <children>
+      <Label layoutX="64.0" layoutY="47.0" text="date" />
+      <Label layoutX="64.0" layoutY="90.0" text="nombre de paquets" />
+      <Label layoutX="64.0" layoutY="126.0" text="dosage" />
+      <Label layoutX="58.0" layoutY="165.0" text="remarque" />
+      <TextField fx:id="tf_dos" layoutX="204.0" layoutY="122.0" />
+      <TextField fx:id="tf_req" layoutX="169.0" layoutY="161.0" />
+      <Button fx:id="ajouter" layoutX="274.0" layoutY="238.0" mnemonicParsing="false" onAction="#ajouter" text="Ajouter" />
+      <Button layoutX="512.0" layoutY="339.0" mnemonicParsing="false" onAction="#retour" text="retour" />
+      <DatePicker fx:id="tf_date" layoutX="157.0" layoutY="43.0" />
+      <TextField fx:id="tf_paq" layoutX="200.0" layoutY="86.0" />
+   </children>
+</AnchorPane>
