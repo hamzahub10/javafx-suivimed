@@ -17,9 +17,9 @@
             <Image url="@../images/logo.png" />
          </image>
       </ImageView>
-      <Button fx:id="register" layoutX="554.0" layoutY="66.0" mnemonicParsing="false" onAction="#register" style="-fx-background-color: #00008B;" text="Register" textFill="#fffefe" />
-      <Button fx:id="login" layoutX="402.0" layoutY="323.0" mnemonicParsing="false" onAction="#login" style="-fx-background-color: #00008B;" text="Login" textFill="WHITE" />
-      <Button fx:id="forget" layoutX="215.0" layoutY="323.0" mnemonicParsing="false" onAction="#btn_forget" style="-fx-background-color: #00008B;" text="Forget Password ?" textFill="#fffbfb" />
+      <Button fx:id="register" layoutX="554.0" layoutY="66.0" mnemonicParsing="false" onAction="#register" style="-fx-background-color: #213f77;" text="Register" textFill="#fffefe" />
+      <Button fx:id="login" layoutX="402.0" layoutY="323.0" mnemonicParsing="false" onAction="#login" style="-fx-background-color: #213f77;" text="Login" textFill="WHITE" />
+      <Button fx:id="forget" layoutX="215.0" layoutY="323.0" mnemonicParsing="false" onAction="#btn_forget" style="-fx-background-color: #213f77;" text="Forget Password ?" textFill="#fffbfb" />
       <Label layoutX="140.0" layoutY="179.0" text="Email" />
       <Label layoutX="140.0" layoutY="258.0" text="Password" />
       <PasswordField fx:id="password" layoutX="215.0" layoutY="254.0" prefHeight="26.0" prefWidth="241.0" promptText="Password" />

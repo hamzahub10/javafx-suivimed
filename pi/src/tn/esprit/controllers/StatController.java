@@ -5,91 +5,63 @@
  */
 package tn.esprit.controllers;
 
-import com.mysql.jdbc.Connection;
+import java.io.IOException;
 import java.net.URL;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.util.Map;
 import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
+import javafx.scene.chart.PieChart;
+import javafx.scene.control.Button;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
-import tn.esprit.tools.MaConnexion;
+import tn.esprit.entities.medicament;
+import tn.esprit.services.MedicamentService;
+import tn.esprit.services.OrdonnanceService;
 
 /**
  * FXML Controller class
  *
- * @author hamza
+ * @author Dorra
  */
 public class StatController implements Initializable {
-      private Connection connection;
-    private PreparedStatement smt;
-    private ResultSet result;
-    private MaConnexion con;
 
     @FXML
-    private AnchorPane stat;
+    private PieChart f_stat;
     @FXML
-    private Label total;
+    private Button retour;
     @FXML
-    private Label doc;
+    private AnchorPane rootPane;
     @FXML
-    private Label pat;
+    private ImageView imagev;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-                 con=new MaConnexion();
-          try {
-              total();
-              doc();
-              pat();
-              
-              // TODO
-          } catch (SQLException ex) {
-              Logger.getLogger(StatController.class.getName()).log(Level.SEVERE, null, ex);
-          }
+        imagev.setImage(new Image("file:C:\\Users\\Dorra\\Documents\\NetBeansProjects\\pi\\src\\tn\\esprit\\images\\logo.png"));
+        medicament ms= new medicament();
+        OrdonnanceService ec = new OrdonnanceService();
+ObservableList<PieChart.Data> pieChartData = FXCollections.observableArrayList();
+Map<String, Integer> stats = ec.getMediStat();
+
+// Iterate over your statistics map and add the data to the PieChart
+stats.entrySet().forEach((entry) -> {
+    pieChartData.add(new PieChart.Data(entry.getKey(), entry.getValue()));
+});
+f_stat.setData(pieChartData);
     }    
-    public void total() throws SQLException{
-          connection=(Connection) con.getCnx();
-        String sql="select count(id) from user";
-        int countData=0;
-        smt=connection.prepareStatement(sql);
-        result=smt.executeQuery();
-        while(result.next()){
-        countData=result.getInt("COUNT(id)");
-        total.setText(String.valueOf(countData));
-        }
+
+    @FXML
+    private void retour(ActionEvent event) throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("/tn/esprit/gui/afficher.fxml"));
+        rootPane.getChildren().setAll(pane);
     }
-     public void doc() throws SQLException{
-          connection=(Connection) con.getCnx();
-        String sql="select count(id) from user where roles='Doctor'";
-        int countData=0;
-        smt=connection.prepareStatement(sql);
-        result=smt.executeQuery();
-        while(result.next()){
-        countData=result.getInt("COUNT(id)");
-        doc.setText(String.valueOf(countData));
-        }
-    }
-         public void pat() throws SQLException{
-          connection=(Connection) con.getCnx();
-        String sql="select count(id) from user where roles='Patiant'";
-        int countData=0;
-        smt=connection.prepareStatement(sql);
-        result=smt.executeQuery();
-        while(result.next()){
-        countData=result.getInt("COUNT(id)");
-        pat.setText(String.valueOf(countData));
-        }
-    }
-    
-        
-    
     
 }

@@ -25,7 +25,7 @@ public class Pi extends Application {
     @Override
     public void start(Stage primaryStage) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("/tn/esprit/gui/Login.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/tn/esprit/gui/AfficherRdv.fxml"));
             
             Scene scene = new Scene(root);
             

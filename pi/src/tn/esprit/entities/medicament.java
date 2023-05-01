@@ -5,13 +5,16 @@
  */
 package tn.esprit.entities;
 
-/**
+import java.util.List;
+
+/** 
  *
  * @author Dorra
  */
 public class medicament {
     private int id;
     private String libelle,fabricant,duree_conservation,forme,gamme; 
+    private List<ordonnance> ordonnances;
 
     public medicament(int id, String libelle, String fabricant, String duree_conservation, String forme, String gamme) {
         this.id = id;
@@ -20,6 +23,7 @@ public class medicament {
         this.duree_conservation = duree_conservation;
         this.forme = forme;
         this.gamme = gamme;
+        
     }
 
     public medicament(String libelle, String fabricant, String duree_conservation, String forme, String gamme) {
@@ -79,6 +83,14 @@ public class medicament {
 
     public void setGamme(String gamme) {
         this.gamme = gamme;
+    }
+    
+    public List<ordonnance> getOrdonnances() {
+        return ordonnances;
+    }
+
+    public void setOrdonnances(List<ordonnance> ordonnances) {
+        this.ordonnances = ordonnances;
     }
 
     @Override

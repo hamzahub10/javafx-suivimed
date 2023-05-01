@@ -3,21 +3,23 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
 
 <AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="tn.esprit.controllers.ModifierController">
    <children>
-      <Label layoutX="75.0" layoutY="44.0" text="libelle" />
-      <Label layoutX="75.0" layoutY="93.0" text="fabricant" />
-      <Label layoutX="75.0" layoutY="141.0" text="duree" />
-      <Label layoutX="75.0" layoutY="192.0" text="forme" />
-      <Label layoutX="75.0" layoutY="242.0" text="gamme" />
-      <TextField fx:id="tf_lib" layoutX="151.0" layoutY="40.0" />
-      <TextField fx:id="tf_fab" layoutX="163.0" layoutY="98.0" />
-      <TextField fx:id="tf_duree" layoutX="174.0" layoutY="150.0" />
-      <TextField fx:id="tf_forme" layoutX="151.0" layoutY="188.0" />
-      <TextField fx:id="tf_gamme" layoutX="151.0" layoutY="238.0" />
-      <Button layoutX="238.0" layoutY="316.0" mnemonicParsing="false" onAction="#modifier" text="Modifier" />
+      <Label fx:id="lib" layoutX="58.0" layoutY="95.0" text="libelle" />
+      <Label fx:id="fab" layoutX="58.0" layoutY="123.0" text="fabricant" />
+      <Label fx:id="dur" layoutX="58.0" layoutY="156.0" text="durée de conservation" />
+      <Label fx:id="form" layoutX="58.0" layoutY="183.0" text="forme" />
+      <Label fx:id="gam" layoutX="58.0" layoutY="217.0" text="gamme" />
+      <TextField fx:id="tf_lib" layoutX="165.0" layoutY="91.0" />
+      <TextField fx:id="tf_fab" layoutX="198.0" layoutY="119.0" />
+      <TextField fx:id="tf_dur" layoutX="208.0" layoutY="152.0" />
+      <TextField fx:id="tf_form" layoutX="177.0" layoutY="179.0" />
+      <TextField fx:id="tf_gam" layoutX="151.0" layoutY="213.0" />
+      <Button fx:id="modifier" layoutX="214.0" layoutY="265.0" mnemonicParsing="false" onAction="#modifier" text="modifier" />
+      <ImageView fx:id="imageV" fitHeight="84.0" fitWidth="163.0" pickOnBounds="true" preserveRatio="true" />
    </children>
 </AnchorPane>

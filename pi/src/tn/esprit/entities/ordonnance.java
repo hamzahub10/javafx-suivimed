@@ -6,15 +6,18 @@
 package tn.esprit.entities;
 
 import java.sql.Date;
+import java.util.List;
 
 /**
  *
  * @author Dorra
  */
 public class ordonnance {
-    private int id,nb_paquet,dosage;
+
+    private int id, nb_paquet, dosage;
     private Date date;
     private String remarque;
+    private int id_med;
 
     public ordonnance(int id, int nb_paquet, int dosage, Date date, String remarque) {
         this.id = id;
@@ -29,7 +32,18 @@ public class ordonnance {
         this.dosage = dosage;
         this.date = date;
         this.remarque = remarque;
+
     }
+
+    public ordonnance(int nb_paquet, int dosage, Date date, String remarque, int id_med) {
+        this.nb_paquet = nb_paquet;
+        this.dosage = dosage;
+        this.date = date;
+        this.remarque = remarque;
+        this.id_med = id_med;
+    }
+
+
 
     public ordonnance() {
     }
@@ -74,9 +88,20 @@ public class ordonnance {
         this.remarque = remarque;
     }
 
+    public int getId_med() {
+        return id_med;
+    }
+
+    public void setId_med(int id_med) {
+        this.id_med = id_med;
+    }
+
+
+
+
     @Override
     public String toString() {
         return "ordonnance{" + "id=" + id + ", nb_paquet=" + nb_paquet + ", dosage=" + dosage + ", date=" + date + ", remarque=" + remarque + "} \n";
     }
-    
+
 }

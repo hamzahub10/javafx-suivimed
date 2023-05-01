@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="617.0" prefWidth="1033.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="tn.esprit.controllers.AfficherActiviteController">
+   <children>
+      <TableView fx:id="tab_act" layoutX="71.0" layoutY="183.0" prefHeight="358.0" prefWidth="892.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="60.0" text="id" />
+          <TableColumn fx:id="id_reg" prefWidth="79.0" text="id_regime" />
+            <TableColumn fx:id="per" prefWidth="71.0" text="periode" />
+            <TableColumn fx:id="nbr" text="nbr_fois" />
+            <TableColumn fx:id="desc" prefWidth="145.0" text="description" />
+            <TableColumn fx:id="obj" prefWidth="100.0" text="object" />
+            <TableColumn fx:id="mat" prefWidth="126.0" text="materiel" />
+            <TableColumn fx:id="vid" prefWidth="230.0" text="video" />
+        </columns>
+      </TableView>
+      <Button fx:id="ajout" layoutX="112.0" layoutY="104.0" mnemonicParsing="false" onAction="#ajouterAct" prefHeight="43.0" prefWidth="118.0" text="Ajouter" />
+      <Button fx:id="supp" layoutX="498.0" layoutY="104.0" mnemonicParsing="false" onAction="#supprimerAct" prefHeight="43.0" prefWidth="118.0" text="Supprimer" />
+      <Button fx:id="mod" layoutX="301.0" layoutY="104.0" mnemonicParsing="false" onAction="#modifierAct" prefHeight="43.0" prefWidth="118.0" text="Modifier" />
+      <Button fx:id="affVid" layoutX="682.0" layoutY="104.0" mnemonicParsing="false" onAction="#afficherVideo" prefHeight="43.0" prefWidth="118.0" text="Afficher Video" />
+   </children>
+</AnchorPane>

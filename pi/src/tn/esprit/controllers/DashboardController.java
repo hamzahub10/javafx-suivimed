@@ -20,6 +20,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -37,14 +38,19 @@ public class DashboardController implements Initializable {
     private Button logout;
     @FXML
     private Button logout1;
+    @FXML
+    private ChoiceBox<String> choice_box;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        choice_box.getItems().addAll("Medicaments","Ordonnances","Rdvs","Consultations","Regimes Alimentaires","Activités Physiques","Blog");
+                choice_box.getSelectionModel().selectFirst();
+
         try {
-            fxml=FXMLLoader.load(getClass().getResource("/tn/esprit/gui/stat.fxml"));
+            fxml=FXMLLoader.load(getClass().getResource("/tn/esprit/gui/total.fxml"));
         } catch (IOException ex) {
             Logger.getLogger(DashboardController.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -56,7 +62,7 @@ public class DashboardController implements Initializable {
 
     @FXML
     private void stat(MouseEvent event) throws IOException {
-       fxml=FXMLLoader.load(getClass().getResource("/tn/esprit/gui/stat.fxml"));
+       fxml=FXMLLoader.load(getClass().getResource("/tn/esprit/gui/total.fxml"));
        root.getChildren().removeAll();
        root.getChildren().setAll(fxml);
     }
@@ -97,6 +103,99 @@ public class DashboardController implements Initializable {
          fxml=FXMLLoader.load(getClass().getResource("/tn/esprit/gui/bars.fxml"));
        root.getChildren().removeAll();
        root.getChildren().setAll(fxml);
+    }
+
+    @FXML
+    private void choice(MouseEvent event) {
+        choice_box.setOnMouseClicked(e->{
+        String choix=choice_box.getValue();
+        switch(choix){
+            case "Medicaments":
+        {
+            try {
+                fxml=FXMLLoader.load(getClass().getResource("/tn/esprit/gui/afficher.fxml"));
+            } catch (IOException ex) {
+                Logger.getLogger(DashboardController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+       root.getChildren().removeAll();
+       root.getChildren().setAll(fxml);
+                break;
+            case "Ordonnances":
+        {
+            try {
+                fxml=FXMLLoader.load(getClass().getResource("/tn/esprit/gui/afficherOrd.fxml"));
+            } catch (IOException ex) {
+                Logger.getLogger(DashboardController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+       root.getChildren().removeAll();
+       root.getChildren().setAll(fxml);
+                break;
+             case "Rdv":
+        {
+            try {
+                fxml=FXMLLoader.load(getClass().getResource("/tn/esprit/gui/AfficherRdv.fxml"));
+            } catch (IOException ex) {
+                Logger.getLogger(DashboardController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+       root.getChildren().removeAll();
+       root.getChildren().setAll(fxml);
+                break;
+                case "Consultations":
+        {
+            try {
+                fxml=FXMLLoader.load(getClass().getResource("/tn/esprit/gui/AfficherConsul.fxml"));
+            } catch (IOException ex) {
+                Logger.getLogger(DashboardController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+       root.getChildren().removeAll();
+       root.getChildren().setAll(fxml);
+                break;
+                case "Regimes Alimentaires":
+        {
+            try {
+                fxml=FXMLLoader.load(getClass().getResource("/tn/esprit/gui/AfficherRegimeFXML.fxml"));
+            } catch (IOException ex) {
+                Logger.getLogger(DashboardController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+       root.getChildren().removeAll();
+       root.getChildren().setAll(fxml);
+                break;
+                case "Activités Physiques":
+        {
+            try {
+                fxml=FXMLLoader.load(getClass().getResource("/tn/esprit/gui/AfficherActivite.fxml"));
+            } catch (IOException ex) {
+                Logger.getLogger(DashboardController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+       root.getChildren().removeAll();
+       root.getChildren().setAll(fxml);
+                break;
+                case "Blog":
+        {
+            try {
+                fxml=FXMLLoader.load(getClass().getResource("/tn/esprit/gui/"));
+            } catch (IOException ex) {
+                Logger.getLogger(DashboardController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+       root.getChildren().removeAll();
+       root.getChildren().setAll(fxml);
+                break;
+                default:
+                    break;
+                
+        
+        
+        }
+        
+        
+        });
     }
         
     }

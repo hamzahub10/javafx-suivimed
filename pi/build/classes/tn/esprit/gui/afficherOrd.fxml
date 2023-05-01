@@ -1,15 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.controllers.AfficherOrdController">
+<AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="484.0" prefWidth="711.0" style="-fx-background-color: #ADD8E6;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.controllers.AfficherOrdController">
    <children>
-      <ListView fx:id="liste_ord" layoutX="24.0" layoutY="37.0" prefHeight="288.0" prefWidth="552.0" />
-      <Button layoutX="116.0" layoutY="343.0" mnemonicParsing="false" onAction="#ajouter" text="Ajouter" />
-      <Button layoutX="274.0" layoutY="343.0" mnemonicParsing="false" onAction="#modifier" text="Modifier" />
-      <Button layoutX="473.0" layoutY="343.0" mnemonicParsing="false" onAction="#supprimer" text="Supprimer" />
-      <Button layoutX="14.0" layoutY="361.0" mnemonicParsing="false" onAction="#retour" text="homepage" />
+      <TableView fx:id="affich_ord" layoutX="30.0" layoutY="188.0" prefHeight="258.0" prefWidth="651.0">
+        <columns>
+          <TableColumn fx:id="dat" prefWidth="142.0" text="date" />
+          <TableColumn fx:id="med" prefWidth="89.0" text="medicament" />
+            <TableColumn fx:id="nb" prefWidth="139.0" text="nombre de paquets" />
+            <TableColumn fx:id="doss" prefWidth="93.0" text="dosage" />
+            <TableColumn fx:id="rqs" prefWidth="115.0" text="remarques" />
+        </columns>
+      </TableView>
+      <FontAwesomeIconView fill="#213f77" glyphName="USER_PLUS" layoutX="43.0" layoutY="152.0" onMouseClicked="#ajouter" size="35" />
+      <FontAwesomeIconView fill="#213f77" glyphName="PENCIL" layoutX="92.0" layoutY="153.0" onMouseClicked="#modifier" size="35" text="" />
+      <FontAwesomeIconView fill="#213f77" glyphName="TRASH" layoutX="129.0" layoutY="152.0" onMouseClicked="#supprimer" size="35" />
+      <Button fx:id="srchbtn" layoutX="629.0" layoutY="163.0" mnemonicParsing="false" onAction="#srch" text="search" textFill="#213f77" />
+      <TextField fx:id="search" layoutX="30.0" layoutY="163.0" prefHeight="25.0" prefWidth="599.0" />
+      <FontAwesomeIconView fill="#213f77" glyphName="SEARCH" layoutX="610.0" layoutY="180.0" size="15" />
+      <FontAwesomeIconView fill="#213f77" glyphName="HOME" layoutX="668.0" layoutY="40.0" onMouseClicked="#retour" size="30" />
+      <ImageView fx:id="imageV" fitHeight="152.0" fitWidth="255.0" layoutX="-20.0" layoutY="-32.0" pickOnBounds="true" preserveRatio="true" />
    </children>
 </AnchorPane>

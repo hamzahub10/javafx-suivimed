@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.controllers.AfficherConsulController">
+   <children>
+      <TableView fx:id="affich_consul" layoutX="51.0" layoutY="56.0" prefHeight="200.0" prefWidth="485.0" style="-fx-border-color: #213f77;">
+        <columns>
+          <TableColumn fx:id="visio" prefWidth="201.60003662109375" text="lien visio-conférence" />
+          <TableColumn fx:id="enreg" prefWidth="232.79998779296875" text="lien enregistrement" />
+            <TableColumn fx:id="prixx" prefWidth="51.199951171875" text="prix" />
+        </columns>
+      </TableView>
+      <FontAwesomeIconView glyphName="USER_PLUS" layoutX="148.0" layoutY="292.0" onMouseClicked="#ajouter" size="35" />
+      <FontAwesomeIconView glyphName="PENCIL" layoutX="288.0" layoutY="290.0" onMouseClicked="#modifier" size="35" />
+      <FontAwesomeIconView glyphName="TRASH" layoutX="435.0" layoutY="300.0" onMouseClicked="#supprimer" size="35" />
+      <FontAwesomeIconView glyphName="ARROW_CIRCLE_LEFT" layoutX="14.0" layoutY="44.0" onMouseClicked="#retour" size="35" />
+   </children>
+</AnchorPane>

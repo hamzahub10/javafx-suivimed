@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.controllers.AjouterController">
+   <children>
+      <Label layoutX="58.0" layoutY="27.0" text="libelle" />
+      <Label layoutX="50.0" layoutY="63.0" text="fabricant" />
+      <Label layoutX="46.0" layoutY="141.0" text="forme" />
+      <Label layoutX="42.0" layoutY="180.0" text="gamme" />
+      <Label layoutX="51.0" layoutY="104.0" text="duree_conservation" />
+      <TextField fx:id="tf_lib" layoutX="127.0" layoutY="23.0" />
+      <TextField fx:id="tf_fab" layoutX="137.0" layoutY="59.0" />
+      <TextField fx:id="tf_dur" layoutX="195.0" layoutY="100.0" />
+      <TextField fx:id="tf_form" layoutX="120.0" layoutY="137.0" />
+      <TextField fx:id="tf_gam" layoutX="120.0" layoutY="176.0" />
+      <Button layoutX="174.0" layoutY="230.0" mnemonicParsing="false" onAction="#ajouter" text="Ajouter" textFill="#213f77" />
+      <Button layoutX="468.0" layoutY="324.0" mnemonicParsing="false" onAction="#retour" text="Retour" textFill="#213f77" />
+      <ImageView fx:id="imageV" fitHeight="85.0" fitWidth="104.0" layoutX="490.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>
